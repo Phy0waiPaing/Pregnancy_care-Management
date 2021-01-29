@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NurseController;
+use App\Http\Controllers\PatientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,8 @@ Route::get('/register', function () {
 Route::get('/login', function () {
     return view('/login');
 });
+
+Route::resources([
+    'nurses' => NurseController::class,
+    'patient' => PatientController::class,
+]);
