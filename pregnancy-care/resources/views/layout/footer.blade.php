@@ -1,3 +1,4 @@
+</div>
 <!-- Footer -->
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
@@ -31,7 +32,7 @@
     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
     <div class="modal-footer">
         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-primary" asp-action="Logout" asp-controller="Account">Logout</a>
+        <a class="btn btn-primary" href="/login">Logout</a>
     </div>
 </div>
 </div>

@@ -13,16 +13,7 @@
             <div class="sidebar-brand-text mx-3"> Admin </div>
         </a>
 
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
 
-        <!-- Nav Item - Dashboard -->
-        <li class="nav-item">
-            <a class="nav-link" asp-action="index" asp-controller="home">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
@@ -41,8 +32,8 @@
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Accounts:</h6>
-                    <a class="collapse-item" href="/Countries/Index">Manage Nurses</a>
-                    <a class="collapse-item" href="/Divisions/Index">Manage Patients</a>
+                    <a class="collapse-item" href="/">Manage Nurses</a>
+                    <a class="collapse-item" href="/">Manage Patients</a>
                 </div>
             </div>
         </li>
@@ -77,6 +68,9 @@
             <!-- Topbar -->
             <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
+                <div class="text-center">
+                    <h2>Pregnancy-care Management System</h2>
+                </div>
                 <!-- Sidebar Toggle (Topbar) -->
                 <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                     <i class="fa fa-bars"></i>
@@ -109,7 +103,7 @@
                                 Activity Log
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <a class="dropdown-item" href="/" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Logout
                             </a>
