@@ -1,0 +1,43 @@
+Pregnancy-care Management System
+
+	-  Nurses
+		- 	Id (PK)
+		-	Name
+		-	Address 
+		-	Phone Number
+		-	Responsible Area
+		
+	
+	- 	Patients
+		-	Id (PK)
+		-	Name
+		-	Age
+		-	Address
+		-	Area
+		-	Phone Number
+		-	Height 
+		-	Date of Registration
+	
+	-	Patient Info
+		-	Patient ID (FK)						
+		-	Questions ( Yes / No )
+			
+	-	Medical History
+		-	Id(PK)
+		-	Nurse Id
+		-	Patient Id
+		-	Weight
+		-	Pregnancy_week
+		-	First_tetanus_vaccine
+		-	Second_tetanus_vaccine
+		-	Due_date
+		-	Current_date
+		-	Next_appointment
+
+
+-	Nurse ( one to many ) Medical History
+-	Patient ( one to many ) Medical History
+-	Patient ( one to one ) Patient Info
+-	Nurse ( many to many ) Patient
+
+
