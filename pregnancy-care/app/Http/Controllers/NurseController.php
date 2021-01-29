@@ -14,7 +14,8 @@ class NurseController extends Controller
      */
     public function index()
     {
-        //
+        $nurses = Nurse::all();
+        return view('nurse.index', compact('nurses'));
     }
 
     /**
@@ -41,6 +42,7 @@ class NurseController extends Controller
         $nurse->number = $request->input("number");
         $nurse->area = $request->input("area");
         $nurse->save();
+        return redirect()->route("nurses.index");
     }
 
     /**
@@ -62,7 +64,7 @@ class NurseController extends Controller
      */
     public function edit(Nurse $nurse)
     {
-        //
+        return view("nurse.edit", compact('nurse'));
     }
 
     /**
@@ -74,7 +76,12 @@ class NurseController extends Controller
      */
     public function update(Request $request, Nurse $nurse)
     {
-        //
+        $nurse->name = $request->input("name");
+        $nurse->address = $request->input("address");
+        $nurse->number = $request->input("number");
+        $nurse->area = $request->input("area");
+        $nurse->save();
+        return redirect()->route("nurses.index");
     }
 
     /**

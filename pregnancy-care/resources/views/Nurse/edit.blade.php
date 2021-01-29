@@ -8,23 +8,24 @@
         <hr />
         <div class="row">
             <div class="col-md-4">
-                <form action="/nurses" method="POST">
+                <form action="{{ route('nurses.update', ['nurse' => $nurse->id]) }}" method="POST">
                     @csrf
+                    @method('put')
                     <div class="form-group">
                         <label name="name" class="control-label">Name</label>
-                        <input name="name" class="form-control" />
+                        <input name="name" class="form-control" value="{{$nurse->name}}" />
                     </div>
                     <div class="form-group">
                         <label name="address" class="control-label">Address</label>
-                        <input name="address" class="form-control" />
+                        <input name="address" class="form-control" value="{{$nurse->address}}" />
                     </div>
                     <div class="form-group">
                         <label name="numberr" class="control-label">Phone Number</label>
-                        <input name="number" class="form-control" />
+                        <input name="number" class="form-control" value="{{$nurse->number}}" />
                     </div>
                     <div class="form-group">
                         <label name="area" class="control-label">Area</label>
-                        <input name="area" class="form-control" />
+                        <input name="area" class="form-control" value="{{$nurse->area}}" />
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Create" class="btn btn-primary" />

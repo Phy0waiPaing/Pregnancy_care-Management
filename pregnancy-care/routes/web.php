@@ -20,14 +20,16 @@ Route::get('/', function () {
 });
 
 Route::get('/register', function () {
-    return view('/register');
+    return view('/Nurse/create');
 });
 
 Route::get('/login', function () {
     return view('/login');
 });
 
+
 Route::resources([
     'nurses' => NurseController::class,
     'patient' => PatientController::class,
 ]);
+
